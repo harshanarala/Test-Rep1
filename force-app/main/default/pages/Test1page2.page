@@ -1,0 +1,12 @@
+<apex:page controller="Test1page2Controller" tabStyle="Student__c">
+<apex:form title="Student Edit page">
+<apex:sectionHeader title="Student Edit Page"/>
+<apex:pageBlock title="Student Edit page">
+    <apex:pageBlockSection >
+     
+    </apex:pageBlockSection>
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

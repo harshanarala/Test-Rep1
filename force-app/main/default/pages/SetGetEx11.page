@@ -1,0 +1,10 @@
+<apex:page controller="SetGetExController">
+  <apex:form id="fm">
+  <b><apex:outputText value="Enter :"></apex:outputText></b>
+  <apex:inputText value="{!name1}"/>
+  <apex:commandButton value="Test" reRender="fm"/>
+ <br> </br>
+  <apex:outputLabel value="{!name1}" /><br/>
+  <apex:outputLabel value="{!s1}"></apex:outputLabel>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="SetGetHandler" >
+  <apex:form >
+  <Apex:inputText value="{!searchId}" html-placeholder="Enter Id"/>
+  <apex:commandButton value="Search" action="{!Ac}"/>
+  <apex:outputText Value="{!s.Name}" />
+  </apex:form>
+</apex:page>

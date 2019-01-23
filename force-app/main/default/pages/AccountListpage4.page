@@ -1,0 +1,1 @@
+<apex:page action="{!URLFor($action.Account.List, $ObjectType.Account)}"/>

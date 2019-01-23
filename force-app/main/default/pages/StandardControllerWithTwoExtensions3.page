@@ -1,0 +1,6 @@
+<apex:page standardController="Student__c" extensions="ExtensionOne,ExtensionTwo">
+<!--When ever we write to same methods in two extensions that it will takes the method from first left most extension -->
+  <apex:form id="TheForm">
+  <apex:commandButton value="Find Out"  action="{!sum}"/>
+  </apex:form>
+</apex:page>

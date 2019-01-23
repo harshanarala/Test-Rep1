@@ -1,0 +1,12 @@
+<apex:page standardController="Lead" recordSetVar="leads" tabstyle="lead" sidebar="false">
+   <apex:pageBlock >
+    <apex:pageBlockTable value="{!leads}" var="ld">
+      <apex:column value="{!ld.name}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+</apex:page>
+<!--<apex:page ShowHeader="True" tabStyle="Lead" >
+
+<apex:listViews type="Lead" />
+
+</apex:page> -->

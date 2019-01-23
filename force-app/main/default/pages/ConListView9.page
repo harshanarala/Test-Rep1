@@ -1,0 +1,8 @@
+<apex:page standardController="Contact" recordSetVar="ConList">
+  <apex:form id="fm">
+      <apex:selectList size="1">
+        <apex:selectOptions value="{!listviewoptions}"/>
+      </apex:selectList>
+      <apex:commandButton action="{!list}" value="Go"/>
+  </apex:form>
+</apex:page>

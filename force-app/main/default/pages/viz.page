@@ -1,0 +1,24 @@
+<apex:page controller="CreateMutipleContacts" sidebar="false">
+<apex:sectionHeader title="Create mutiple Contats" subtitle="for {!accName} "/>
+<apex:form >
+<apex:pageBlock title="Add Contacts">
+    <apex:pageBlockTable value="{!conList}" var="con"> 
+    <apex:column headerValue="First Name">
+        <apex:inputField value="{!con.FirstName}"/>
+        </apex:column>
+      
+    <apex:column headerValue="Last Name">
+        <apex:inputField value="{!con.LastName}"/>
+        </apex:column>
+       
+    <apex:column headerValue="Phone" >
+        <apex:inputField value="{!con.Phone}"/>
+        </apex:column>
+      
+    <apex:column headerValue="Email" >  
+        <apex:inputField value="{!con.Email}"/>
+        </apex:column>
+    </apex:pageBlockTable>    
+</apex:pageBlock>
+</apex:form>
+</apex:page>

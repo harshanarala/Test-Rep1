@@ -1,0 +1,2 @@
+<apex:page action="{!URLFOR ($Action.Account.List, $objectType.Account)}"/>
+<!-- By this it will show the Account List view-->

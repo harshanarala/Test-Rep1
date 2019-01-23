@@ -1,0 +1,33 @@
+<apex:page controller="ConAccOppController" tabStyle="Contact" sidebar="false" >
+ <apex:sectionHeader Title="Contact Detail Page"/>
+ <apex:form id="fm">
+   <apex:pageBlock title="Contact Details" id="pb" >
+     <apex:pageBlockTable value="{!ConList}" var="Con" rows="10" >
+       <apex:column value="{!Con.FirstName}" />
+       <apex:column value="{!Con.LastName}" />
+       <apex:column value="{!Con.Phone}" />
+       <apex:column value="{!Con.AccountId}" />
+       <apex:column headerValue="Check" >
+       <apex:commandButton value="Check" reRender="pb" action="{!SelectCon}" >
+           <apex:param name="GetAccId" value="{!Con.AccountId}" assignTo="{!GetAccId}"/>
+           <apex:param name="GetConId" value="{!Con.Id}" assignTo="{!GetConId}"/>
+       </apex:commandButton>
+       </apex:column>
+      
+     </apex:pageBlockTable>
+     
+       <apex:pageBlockSection title="Account Details" id="APBS" >
+           <apex:outputText value="{!Acc.Name}"/>
+           <apex:outputText value="{!Acc.Phone}"/>
+           <apex:outputText value="{!Acc.AccountNumber}"/> 
+           <apex:outputText value="{!Acc.Fax}"/>          
+       </apex:pageBlocksection>
+        
+       <apex:pageBlockSection title="Opportunity Details">
+           <apex:detail relatedList="true"/>
+       </apex:pageBlockSection> 
+       
+   
+   </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="ConInfo" >
+  <apex:form >
+      <apex:pageBlock Title="Contacts">
+      <apex:pageBlockTable value="{!Contact}" var="Con" >
+      </apex:pageBlockTable>
+      </apex:pageBlock>  
+  
+      <apex:pageBlock Title="Account & Opportunities" >
+      
+      </apex:pageBlock>  
+  </apex:form>
+</apex:page>

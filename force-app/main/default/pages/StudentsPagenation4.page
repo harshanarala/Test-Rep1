@@ -1,0 +1,20 @@
+<apex:page standardController="Student__c" recordSetVar="Stu">
+ <apex:form >
+  
+  <apex:pageBlock >
+    <apex:pageBlockTable value="{!Stu}" var="stt" id="PageBlTable">
+        <apex:column value="{!stt.Name}"/>
+        <apex:column value="{!stt.Batch__c}"/>
+        <apex:column value="{!stt.Fee__c}"/>
+        <apex:column value="{!stt.Fee_Paid__c}"/>
+    </apex:pageBlockTable>
+    <center>
+    <apex:commandLink value="First" action="{!First}" reRender="PageBlTable"/>&nbsp;&nbsp;
+    <apex:commandLink value="Previous" action="{!Previous}" reRender="PageBlTable"/>&nbsp;&nbsp;
+    <apex:commandLink value="Next" action="{!Next}" reRender="PageBlTable"/>&nbsp;&nbsp;
+    <apex:commandLink value="Last" action="{!Last}" reRender="PageBlTable"/>
+    </center>
+   </apex:pageBlock>
+ 
+ </apex:form>
+</apex:page>

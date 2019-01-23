@@ -1,0 +1,8 @@
+<apex:page >
+{!$profile.id}<br></br>
+{!$profile.name}<br></br>
+<apex:form >
+<apex:commandLink value="HI" rendered="{!IF($Profile.Name=='System Administrator', true , false )}"/>
+
+</apex:form>
+</apex:page>

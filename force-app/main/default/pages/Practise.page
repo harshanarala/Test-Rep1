@@ -1,0 +1,62 @@
+<apex:page >
+
+ This is practice page of {!$User.FirstName} and his profile is {!$Profile.Name}.
+ <apex:form >
+     IN from Labels will not display
+     <apex:sectionHeader title="Section Header Title" 
+                     subtitle="Section Header Subtitle" 
+                     description="This from Description of the Section header" 
+                     Help="https://www.pinterest.com" 
+                     printUrl="https://www.google.com" 
+                     rendered="true" id="sectionHeader"/>
+     Radio <apex:selectRadio ></apex:selectRadio>
+     Check Box <apex:selectCheckboxes > </apex:selectCheckboxes>
+     <apex:commandButton Value="Command Button" reRender="pageBlock"/> <br/>
+     
+     Input Text<apex:inputText label="InputText" html-placeholder="Input Text"/>  <br/> 
+     Output Text<apex:outputText label="Hai" html-placeholder="Input Text" title="Hi" /> <br/>                
+     IN from Labels will not display
+     <apex:pageBlock title="My Page Block Title"  >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save"/>
+            <apex:commandButton value="Save& New"/>
+            <apex:commandButton value="Delete"/>
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockSection COlumns="1" >Hi
+        <apex:selectRadio label="Radio" title="Radio" disabled="false" immediate="true"></apex:selectRadio>
+        <apex:selectCheckboxes label="Check Box" > </apex:selectCheckboxes>
+        <apex:commandButton Value="Command Button" reRender="pageBlock" /> 
+        <apex:inputText label="InputField" html-placeholder="Username" /> 
+        <apex:outputText label="OutputField"/>
+        </apex:pageBlockSection>
+     
+     </apex:pageBlock>
+ </apex:form>
+ 
+ <apex:form >
+ <apex:tabPanel title="TAB Panel" switchType="client"  >
+     <apex:tab label="Tab1"    >
+         This is from Tab1
+         <apex:tabPanel title="TAB Panel" switchType="client"  >
+         <apex:tab label="Tab1 Child1"    >
+         This is from Tab1
+         </apex:tab>
+         <apex:tab Label="Tab1 Child2" >
+         This is from Tab2
+         </apex:tab>
+ </apex:tabPanel>
+     </apex:tab>
+     <apex:tab Label="Tab2" >
+         This is from Tab2
+     </apex:tab>
+     
+ </apex:tabPanel>
+ </apex:form>
+ 
+ 
+ 
+ <apex:form >
+ Hai thi second form
+ </apex:form>
+</apex:page>

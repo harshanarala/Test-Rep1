@@ -1,0 +1,19 @@
+<apex:page standardController="Case" recordSetVar="Caselist">
+    <apex:pageBlock title="List of Cases">
+        <apex:pageBlockTable value="{!Caselist}" var="cas">
+            <apex:column value="{!cas.Accountid}"/> 
+            <apex:column value="{!cas.Assetid}"/>
+            <apex:column value="{!cas.BusinessHoursid}"/>
+            <apex:column value="{!cas.CaseNumber}"/>
+            <apex:column value="{!cas.Origin}"/>
+            <apex:column value="{!cas.Ownerid}"/>
+            <apex:column value="{!cas.Reason}"/>
+            <apex:column value="{!cas.IsClosedOnCreate}"/>
+            <apex:column value="{!cas.CreatedByid}"/>
+            <apex:column value="{!cas.Parentid}"/>
+            <apex:column value="{!cas.Priority}"/>
+            <apex:column value="{!cas.Contactid}"/>
+            <apex:column value="{!cas.Status}"/>
+        </apex:pageBlockTable> 
+    </apex:pageBlock> 
+</apex:page>

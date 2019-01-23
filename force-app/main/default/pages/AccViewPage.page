@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="acc">
+<apex:detail relatedList="false"/>
+<apex:form > 
+<apex:pageBlock id="pbs">
+<apex:pageBlockSection >
+
+<apex:inputField value="{!Account.Description}"   style="width:400px,Lenth:400px" >
+</apex:inputField>
+</apex:pageBlockSection>
+<apex:commandButton Value="Something"  action="{!Something}"/>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

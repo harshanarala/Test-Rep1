@@ -1,0 +1,16 @@
+<apex:page standardController="contact" extensions="Example4SelectdList" >
+
+     <apex:form id="theform" >
+         <apex:pageBlock id="theblock" >
+             <div style="width:700px; margin:0 auto;">
+                 <apex:outputText value="List of Contacts : "/>
+                 <apex:selectList value="{!selectedItemValue}" multiselect="false" size="1">
+                     <apex:actionSupport event="onchange"  action="{!changeRec}" status="thestatus" reRender="theform" />
+                     <apex:selectOptions value="{!items}"/>
+                 </apex:selectList>
+             </div>
+         </apex:pageBlock>
+         <apex:actionStatus id="thestatus" startText="Please Wait It's Loading....."></apex:actionStatus>
+         <apex:detail subject="{!recId}" rendered="{!if(recId!=null,true,false)}" relatedList="false" />        
+     </apex:form>
+</apex:page>

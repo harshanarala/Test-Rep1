@@ -1,0 +1,12 @@
+<apex:page controller="Mytest1">
+    <apex:form >
+        <apex:actionFunction name="Method1" action="{!Method1}" oncomplete="Method2();" />
+        
+    </apex:form>
+
+    <script>
+        // kick it off
+        Method1();
+    </script>
+
+</apex:page>

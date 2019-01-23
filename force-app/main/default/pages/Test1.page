@@ -1,0 +1,17 @@
+<apex:page standardController="Student__c" extensions="Test1Controller" tabStyle="Student__c">
+<apex:form >
+ <apex:pageBlock >
+ <apex:sectionHeader title="New Student"/>
+ <apex:pageBlockSection title="Student Details">
+ <apex:inputField value="{!st.Name}"/>
+ <apex:inputField value="{!st.Last_Name__c}"/>
+ <apex:inputField value="{!st.Batch__c}"/>
+ </apex:pageBlockSection>
+ <apex:pageBlockButtons >
+     <apex:commandButton value="Save" action="{!Save}"/>
+     <apex:commandButton value="Save & New" action="{!SaveAndNew}"/>
+     <apex:commandButton value="Cancel" action="{!Cancel}"/>
+ </apex:pageBlockButtons>
+ </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,20 @@
+<apex:page controller="SelectedContactController" tabStyle="Contact">
+    <apex:sectionHeader title="Contact Select from Picklist"/>
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:selectList value="{!Contact}" label="Select Contact" size="1">
+            <apex:selectOptions value="{!Contacts}"></apex:selectOptions>
+            <apex:actionSupport event="onchange" action="{!changeRec}" reRender="ot,detailpb"/>
+        </apex:selectList>
+        <apex:outputText title="Slect Contact" id="ot" label="Selected Contact" value="{!Contact}"></apex:outputText>
+        </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+        <apex:pageBlock id="detailpb">
+        <apex:detail subject="{!recId}" rendered="{!if(recId!=null,true,false)}"/>
+        </apex:pageBlock>
+        
+    </apex:form>
+
+</apex:page>

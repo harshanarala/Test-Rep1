@@ -1,0 +1,40 @@
+<apex:page controller="AccountOppContactWizardController" tabStyle="Account">
+<apex:form >
+ <script>
+  function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) 
+        cancel();
+       return false;
+  }
+  </script> 
+<apex:sectionHeader title="Step 3"/>
+    <apex:pageBlock >
+    <apex:pageBlockSection title="Account Details" columns="1">
+        <apex:outputField value="{!Acc.Name}"/>
+        <apex:outputField value="{!Acc.Phone}"/>
+        <apex:outputField value="{!Acc.Fax}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Contact Details" columns="1">
+        <apex:outputField value="{!Con.FirstName}"/>
+        <apex:outputField value="{!Con.LastName}"/>
+        <apex:outputField value="{!Con.Phone}"/>
+        <apex:outputField value="{!Con.Email}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Opportunity Details" columns="1">
+        <apex:outputField value="{!Opp.Name}"/>
+        <apex:outputField value="{!opp.StageName}"/>
+        <apex:outputField value="{!opp.CloseDate}"/>
+    </apex:pageBlockSection>
+   
+    <apex:pageBlockButtons >
+        <apex:commandButton value="Previous" action="{!Step2}"/>
+        <apex:commandButton value="Save" action="{!save}" />
+        <apex:commandButton value="Cancel" onclick="confirmCancel(); return false;"/>
+      <apex:actionFunction name="cancel" action="{!cancel}" />
+    </apex:pageBlockButtons>
+    
+    </apex:pageBlock>
+</apex:form>
+ 
+</apex:page>

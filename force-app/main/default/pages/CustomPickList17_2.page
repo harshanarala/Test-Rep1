@@ -1,0 +1,29 @@
+<apex:page Controller="CustomPickList17_2Controller" >
+ <apex:form id="fm">
+ <apex:sectionHeader Title="Counties" /> 
+ <apex:pageBlock id="pb">
+ 
+  Continents : 
+   <apex:selectList value="{!Conts}" size="1">
+      <apex:selectOptions value="{!Continents}"/>
+      <apex:actionSupport event="onchange" reRender="ot" status="Status" />
+   </apex:selectList><br/>
+    
+  
+  <apex:actionStatus id="Status">
+    <apex:facet name="start" >
+        <img src="/img/loading.gif"/>                             
+    </apex:facet> 
+  </apex:actionStatus> 
+  <apex:outputText label="Continent Selected:" id="ot" value="{!Conts}"/>    
+    <!--  <apex:actionStatus id="Status" startText="Loading---"> 
+       <apex:facet name="stop" >
+         
+         <apex:outputText id="ot" value="{!Conts}"/>
+         
+       </apex:facet>
+      </apex:actionStatus>-->
+    
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

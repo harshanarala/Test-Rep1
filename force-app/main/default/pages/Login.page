@@ -1,0 +1,39 @@
+<apex:page >
+
+<apex:tabPanel switchType="client" style="Account" headerAlignment="Right"  >
+    <apex:tab label="Create" >
+    <apex:panelGrid bgcolor="red" border="0" width="700">
+    <apex:form >
+        <apex:pageblock mode="Edit" >
+        <apex:pageBlockSection columns="1" id="Crt" title="Sign Up Tab" >
+        <apex:inputText label="First Name" html-placeholder="Username"/>
+        <apex:inputText label="Last Name"/>
+        <apex:inputSecret label="New Password" />
+        <apex:inputSecret label="Confirm Password" />
+        <apex:inputText label="Mobile" />
+        <apex:commandButton Value="Create" reRender="Crt" />
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+    </apex:panelGrid>
+    </apex:tab>
+
+    <apex:tab label="SignIn" title="Hi  b cgjgf">
+    <apex:image value="{!$Resource.GmailLogo}" height="20"/>
+    <apex:form >
+        
+        <apex:pageblock >
+        <apex:pageBlockSection columns="1" >
+        <apex:inputText label="Name"/>
+        <apex:inputSecret label="Password"/>
+        <apex:commandButton Value="Login" />
+        </apex:pageBlockSection>
+        </apex:pageblock>
+        
+    </apex:form>
+    </apex:tab>
+
+
+</apex:tabPanel>
+
+</apex:page>

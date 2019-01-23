@@ -1,0 +1,36 @@
+<apex:page standardController="Account" recordSetVar="Accs">
+  <apex:form >
+  
+  <apex:pageBlock title="From Data List">
+   <apex:dataList value="{!Accs}" var="acc">
+      <apex:outputTExt value="{!acc.Name}" />
+      <apex:outputTExt value="{!acc.Phone}"/>
+      <apex:outputTExt value="{!acc.Fax}"/>
+   </apex:dataList>
+  </apex:pageBlock>
+  
+  <apex:pageBlock title="From Data Table">
+   <apex:dataTable value="{!Accs}" var="acc" columns="3" >
+   <!-- <apex:facet name="header">Account Name</apex:facet> -->  
+      <apex:column headerValue="Name">
+      <apex:outputText value="{!acc.Name}"/>&nbsp;&nbsp;&nbsp;
+      </apex:column>
+      <apex:column headerValue="Phone" >
+      <apex:outputText value="{!acc.Phone}" />&nbsp;&nbsp;&nbsp;
+      </apex:column>
+      <apex:column headerValue="Fax">
+      <apex:outputText value="{!acc.Fax}" />
+      </apex:column>
+   
+   </apex:dataTable>
+  </apex:pageBlock>
+  
+  <apex:pageBlock title="From PageBlockTable">
+      <apex:pageBlockTable value="{!Accs}" var="acc">
+       <apex:column value="{!acc.Name}"/>
+       <apex:column value="{!acc.Phone}"/>
+       <apex:column value="{!acc.Fax}"/>
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

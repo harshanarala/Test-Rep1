@@ -1,0 +1,28 @@
+<apex:page controller="CalciController">
+  <apex:form >
+      <apex:pageBlock id="ThePageBlock" >
+        <apex:commandButton value="Clear" action="{!Clr}" reRender="ThePageBlock"/><br/>
+        A<apex:inputText value="{!a}" id="A"/><br/>
+        B<apex:inputText value="{!b}" id="B"/><br/>
+        C:<apex:outputText value="{!c}"></apex:outputText><br/>
+        
+        <apex:commandButton value="+" action="{!Add}" reRender="ThePageBlock"/>&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="-" action="{!Sub}" reRender="ThePageBlock"/>&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="*" action="{!Mul}" reRender="ThePageBlock"/>&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="/" action="{!Div}" reRender="ThePageBlock"/><br/>
+        
+        <apex:commandButton value="1" action="{!One}" reRender="A"/>
+        <apex:commandButton value="2" reRender="ThePageBlock"/>
+        <apex:commandButton value="3" reRender="ThePageBlock"/><br/>
+        <apex:commandButton value="4" reRender="ThePageBlock"/>
+        <apex:commandButton value="5" reRender="ThePageBlock"/>
+        <apex:commandButton value="6" reRender="ThePageBlock"/><br/>
+        <apex:commandButton value="7" reRender="ThePageBlock"/>
+        <apex:commandButton value="8" reRender="ThePageBlock"/>
+        <apex:commandButton value="9" reRender="ThePageBlock"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="0" reRender="ThePageBlock"/>
+        
+        
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

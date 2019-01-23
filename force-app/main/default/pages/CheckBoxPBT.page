@@ -1,0 +1,20 @@
+<apex:page standardController="Student__c" extensions="CheckBoxPBText" recordSetVar="std">
+    <apex:form >
+        <apex:pageBlock title="Wrong Manner">
+            <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="SAVE"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockTable value="{!std}" var="st">
+                <apex:column headerValue="Select All" >
+                    <apex:inputCheckbox />
+                </apex:column>
+                <apex:column value="{!st.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Correct Manner By Using Wrapper">
+            
+        </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

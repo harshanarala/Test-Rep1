@@ -1,0 +1,71 @@
+<apex:page sidebar="false" standardstylesheets="false" showheader="false" doctype="html-5.0">
+    
+    <html>
+        <head>
+            <link rel="stylesheet" href="{!URLFOR($Resource.slds, '/assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+            <script src="js/jquery-1.11.1.min.js"></script>
+            <script src="{!URLFOR($Resource.aljs, '/aljs/js/aljs-init.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/js/aljs-datepicker.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/js/aljs-modal.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/js/aljs-pill.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/js/aljs-tooltip.min.js')}"></script>
+            
+        </head>
+        <script>
+            var assetsLocation = '{!URLFOR($Resource.slds)}';
+            $.aljsInit({
+                assetsLocation: assetsLocation,
+                scoped: true
+            });
+        </script>
+        <body>
+        <div class="slds">
+            <div class="slds-form-element">
+                <div class="slds-picklist--draggable slds-grid" data-aljs="multi-select">
+                    <div class="slds-form-element">
+                        <span class="slds-form-element__label" aria-label="select-1">First Category</span>
+                        <div class="slds-picklist slds-picklist--multi" data-aljs-multi-select="unselected">
+                            <ul class="slds-picklist__options slds-picklist__options--multi shown"></ul>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid--vertical">
+                        <button class="slds-button slds-button--icon-container" data-aljs-multi-select="unselect">
+                            <svg aria-hidden="true" class="slds-button__icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Pick list</span>
+                        </button>
+                        <button class="slds-button slds-button--icon-container" data-aljs-multi-select="select">
+                            <svg aria-hidden="true" class="slds-button__icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Pick list</span>
+                        </button>
+                    </div>
+                    <div class="slds-form-element">
+                        <span class="slds-form-element__label" aria-label="select-2">Second Category</span>
+                        <div class="slds-picklist slds-picklist--multi" data-aljs-multi-select="selected">
+                            <ul class="slds-picklist__options slds-picklist__options--multi shown"></ul>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid--vertical">
+                        <button class="slds-button slds-button--icon-container" data-aljs-multi-select="move-up">
+                            <svg aria-hidden="true" class="slds-button__icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#up"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Pick list</span>
+                        </button>
+                        <button class="slds-button slds-button--icon-container" data-aljs-multi-select="move-down">
+                            <svg aria-hidden="true" class="slds-button__icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Pick list</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </body>
+
+    </html>
+</apex:page>

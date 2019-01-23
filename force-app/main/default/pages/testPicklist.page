@@ -1,0 +1,12 @@
+<apex:page controller="testPicklist">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+  <apex:inputField value="{!trg.City__c}"/>
+      <apex:selectList value="{!trg.Location__c}" size="1">
+          <apex:selectOptions value="{!td}" />
+      </apex:selectList>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

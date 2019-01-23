@@ -1,0 +1,16 @@
+<apex:page StandardController="Account">
+{!$User.FirstName}
+<Apex:form >
+<apex:pageBlock >
+<Apex:pageBlockSection >
+<apex:inputField label="{!account.Name}"/>
+
+
+<apex:inputField value="{!account.Parent}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</Apex:form>
+   
+
+  
+</apex:page>

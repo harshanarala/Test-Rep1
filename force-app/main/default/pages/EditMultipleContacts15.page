@@ -1,0 +1,22 @@
+<apex:page standardController="Contact" recordSetVar="Contacts" sidebar="false">
+<apex:sectionHeader Title="Contact Edit of"/>
+<apex:form >
+<apex:pageBlock >
+    <apex:pageBlockButtons >
+      <apex:commandButton value="Save" Action="{!save}"/>
+      <apex:commandButton value="Cancel" Action="{!cancel}"/>
+    </apex:pageBlockButtons>
+    <apex:pageBlockTable value="{!Selected}" var="Con">
+      <apex:column headerValue="First Name">
+        <apex:inputField value="{!Con.FirstName}"/>
+      </apex:column>
+      <apex:column headerValue="Last Name">
+        <apex:inputField value="{!Con.LastName}"/>
+      </apex:column>
+      <apex:column headerValue="Email">
+        <apex:inputField value="{!Con.Email}"/>
+      </apex:column>
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form> 
+</apex:page>

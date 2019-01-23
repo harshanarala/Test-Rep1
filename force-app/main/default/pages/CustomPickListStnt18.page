@@ -1,0 +1,15 @@
+<apex:page controller="CustPickListStnt18Controller" tabStyle="Student__c">
+<apex:sectionHeader Title="SectionHeader Title" subtitle="SectionHeader Subtitle"/>
+  <apex:form title="Form Title">
+      <apex:pageBlock title="Page Block Title">
+          <apex:pageBlockSection title="PageBlock Section Title" collapsible="false">
+              
+              <apex:selectList value="{!SelectList}" size="1" label="Student:">
+                  <apex:selectOptions value="{!students}" ></apex:selectOptions>
+                  <apex:actionSupport event="onchange" reRender="ot" />
+              </apex:selectList>
+              <apex:outputText label="You selected :" id="ot" value="{!SelectList}"></apex:outputText>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

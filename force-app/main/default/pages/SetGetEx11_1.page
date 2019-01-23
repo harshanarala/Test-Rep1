@@ -1,0 +1,11 @@
+<apex:page controller="SetGetExController1">
+  <apex:form >
+  <apex:outputLabel value="{!ABC}"></apex:outputLabel>
+  <b><apex:outputText value="Enter :"></apex:outputText></b>
+  <apex:inputText value="{!s}"/>
+  <apex:commandButton value="Test"/>
+ <br> </br>
+  <apex:outputText value="{!s}" />
+  
+  </apex:form>
+</apex:page>

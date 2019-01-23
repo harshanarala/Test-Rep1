@@ -1,0 +1,7 @@
+<apex:page standardController="Contact" extensions="picklist">
+  <apex:form >
+  <apex:selectList value="{!selected}" size="1"  > 
+      <apex:selectOptions value="{!Contact}"></apex:selectOptions>
+  </apex:selectList>
+  </apex:form>
+</apex:page>

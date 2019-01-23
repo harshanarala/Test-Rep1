@@ -1,0 +1,19 @@
+<apex:page standardController="Account" extensions="AccountWithContactController">
+<apex:form >
+<apex:sectionHeader Title="Account & Contact" subtitle="NewAccount & Contact"/>
+<apex:pageBlock Title="Account Edit" mode="Edit">
+    
+    <apex:pageBlockButtons >
+    <apex:commandButton value="Save" action="{!save}"/>
+    <Apex:commandButton value="Cancel" action="{!cancel}"/>
+    </apex:pageBlockButtons>
+
+    <apex:pageBlockSection title="Account Information">
+     <apex:inputField value="{!Account.Name}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlocksection title="Contact Information">
+     <apex:inputField value="{!contact.lastName}"/>
+    </apex:pageBlocksection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordSetVar="AccList">
+<apex:sectionHeader Title="Accounts"/>
+<apex:form >
+    <apex:pageBlock id="pb"  >
+    <apex:pageBlockSection >
+    <b><apex:outputText value="View:"/></b>
+    <apex:selectList value="{!filterid}" size="1">
+        <apex:actionSupport event="onchange" reRender="pb" />
+        <apex:selectOptions value="{!listViewoptions}"/>
+    </apex:selectList>
+    <apex:dataList value="{!AccList}" var="a" >
+    {!a.Name}
+    </apex:dataList>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

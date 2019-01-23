@@ -1,0 +1,29 @@
+<apex:page controller="TejaController" sidebar="false">
+  <apex:form >
+      
+          <center>
+            <apex:commandButton value="Get Teams" action="{!MyTeam}">
+                
+            </apex:commandButton>
+          </center>
+    <apex:outputPanel id="TeamPanel">
+      <apex:pageBlock >
+          <apex:pageBlockTable value="{!mtlst}" var="m" rendered="{!pbtablepnl}">          
+             <apex:column headerValue="Name">
+               <apex:outputLabel value="{!m.name}" />
+               </apex:column>
+             <apex:column value="{!m.id}" headerValue="Id"/>
+          </apex:pageBlockTable>
+      </apex:pageBlock>
+    </apex:outputPanel>
+    
+    <apex:outputPanel id="TeamMemberPanel">
+       <apex:pageBlock rendered="{!pbsessionpnl}">
+          <apex:pageBlockSection title="Team Members">
+              
+          </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:outputPanel>
+      
+  </apex:form>
+</apex:page>

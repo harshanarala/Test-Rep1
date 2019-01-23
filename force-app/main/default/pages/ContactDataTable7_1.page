@@ -1,0 +1,25 @@
+<apex:page standardController="Contact" recordSetVar="Contacts" sidebar="false">
+<apex:sectionHeader title="Contacts" Subtitle="Home"/>
+<apex:form id="fm">
+    <apex:pageBlock id="pb" >
+    <b><apex:outputText value="View:"/></b>
+    <apex:selectList value="{!filterid}" size="1">
+        <apex:actionSupport event="onchange" reRender="fm"/>
+        <apex:selectOptions value="{!listViewOptions}"/>
+    </apex:selectList>
+    <apex:pageBlockSection >
+        <apex:dataTable value="{!Contacts}" var="con" bgcolor="#505070" border="1" width="100%">
+            <apex:column value="{!con.Name}"/>
+            <apex:column value="{!con.AccountId}"/>
+            <apex:column value="{!con.Phone}"/>
+        </apex:dataTable>
+    </apex:pageBlockSection>
+    <center>
+    <apex:commandLink value="First" action="{!first}" reRender="pb"/>&nbsp;&nbsp;
+    <apex:commandLink value="Previous" action="{!previous}" reRender="pb"/>&nbsp;&nbsp;
+    <apex:commandLink value="Next" action="{!next}" reRender="pb"/>&nbsp;&nbsp;
+    <apex:commandLink value="Last" action="{!last}" reRender="pb"/>&nbsp;&nbsp;
+    </center>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

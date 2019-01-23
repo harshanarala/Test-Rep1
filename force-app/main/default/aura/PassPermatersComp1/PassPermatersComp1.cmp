@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable" access="global" >
+    <aura:registerEvent name="loadMyEvent" type="c:PassPermatersCompEvent"/>
+    <p>Hello from Component 1</p>
+    <br/>
+    <ui:inputNumber aura:id="Input1" label="First Value"  required="true"/>
+    <ui:inputNumber aura:id="Input2" label="Second Value"  required="true"/>
+    <ui:button label="sum" press="{!c.Add}"/>
+    <br/>
+</aura:component>

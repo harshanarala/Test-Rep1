@@ -1,0 +1,18 @@
+<apex:page standardController="Contact" extensions="ContactSaveController">
+<apex:sectionHeader title="Contact Edit" subtitle="New Contact"/>
+<apex:form id="fm">
+<apex:pageBlock id="PB">
+    <apex:pageBlockButtons >
+        <apex:commandButton value="Save" action="{!save}" />
+        <apex:commandButton value="Save & New" action="{!SaveNew}"/>
+        <apex:commandButton value="Cancel" action="{!Cancel}"/>
+    </apex:pageBlockButtons>
+    <apex:pageBlockSection title="Contact Details" columns="1">
+        <apex:inputField value="{!Contact.FirstName}"/>
+        <apex:inputField value="{!Contact.LastName}" required="false"/>
+        <apex:inputField value="{!Contact.MobilePhone}"/>
+        <apex:inputField value="{!Contact.AccountId}"/>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

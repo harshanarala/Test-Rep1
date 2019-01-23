@@ -1,0 +1,35 @@
+<apex:page StandardController="Contact" sidebar="False" >
+<apex:sectionHeader title="Contact Edit" subtitle="New Contact"/>
+<apex:form >
+ <apex:pageBlock mode="edit" >
+    
+    <apex:pageBlockButtons > 
+    
+    <apex:commandButton value="Save" Action="Save"/>
+    <apex:commandButton value="Save & New"/>
+    <apex:commandButton value="Cancel" Action="Cancel"/>
+    </apex:pageBlockButtons>
+    
+    <apex:pageBlockSection Title="Contact Information" columns="1">
+    <apex:outputText value="{!Contact.Owner}"/>
+    <apex:inputField value="{!Contact.Phone}"/>
+    <apex:inputField value="{!Contact.FirstName}"/>
+    <apex:inputField value="{!Contact.HomePhone}"/>
+    <apex:inputField value="{!Contact.LastName}"/>
+    
+    <apex:inputField value="{!Contact.MobilePhone}"/>
+    <apex:inputField value="{!Contact.AccountID}"/>
+    <apex:inputField value="{!Contact.OtherPhone}"/>
+    <apex:inputField value="{!Contact.Title}"/>
+    <apex:inputField value="{!Contact.Fax}"/>
+    <apex:inputField value="{!Contact.Department}"/>
+    <apex:inputField value="{!Contact.Email}"/>
+    <apex:inputField value="{!Contact.Birthdate}"/>
+    <apex:inputField value="{!Contact.AssistantName}"/>
+    <apex:inputField value="{!Contact.AssistantPhone}"/>
+    
+    </apex:pageBlockSection>
+ 
+ </apex:pageBlock>
+</apex:form>  
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page controller="CustomPickList17_1Controller">
+ <apex:form >
+ <apex:pageBlock id="thePageBlock" >
+ 
+ <apex:selectList value="{!Conlist}" size="1" >
+     <apex:selectOptions Value="{!Contacts}"  />
+     <apex:actionSupport event="onchange" rerender="thePageBlock" />
+ </apex:selectList>
+ 
+ <br/>
+  
+ This is Id : <apex:outputText id="fm" value="{!Conlist}"></apex:outputText>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

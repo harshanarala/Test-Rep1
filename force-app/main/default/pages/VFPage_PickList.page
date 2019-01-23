@@ -1,0 +1,16 @@
+<apex:page controller="MyVFListController" id="pg" docType="HTML-5.0">
+  <apex:form id="fm" >
+  
+  <apex:pageBlock id="pb">
+      
+      <apex:outputLabel value="VF Pages :"></apex:outputLabel>
+      <apex:selectList value="{!VFpage}" size="1" id="slt" >
+          <apex:actionSupport event="onchange" reRender="cb"/>
+          <apex:selectOptions value="{!VFpgs}"/>
+      </apex:selectList>
+      <apex:commandButton id="cb" value="Go"  onClick="window.open('/apex/{!VFpage}');" />
+      
+  </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

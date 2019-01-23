@@ -1,0 +1,11 @@
+<apex:page controller="exampleCon">
+    <apex:form >
+        <apex:outputText value="Watch this counter: {!count}" id="counter"/>
+        <apex:actionPoller action="{!incrementCounter}" reRender="counter,opt" interval="5"/>
+        
+        <apex:outputText id="opt" value="The formatted time right now is: 
+         {0,date,yyyy.MM.dd G 'at' HH:mm:ss z}">
+               <apex:param value="{!NOW()}" />
+       </apex:outputText>
+    </apex:form>
+</apex:page>

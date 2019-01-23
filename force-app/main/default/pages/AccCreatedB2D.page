@@ -1,0 +1,28 @@
+<apex:page controller="AccCreatedB2DController" docType="HTML-5.0" tabStyle="Account" id="pg">
+<apex:sectionHeader title="Account Between Two Days"/>
+  <apex:form >
+  
+  <apex:pageBlock id="PB">
+      <apex:outputLabel value="Start Date :">
+          <apex:input type="date" label="Start Date :" value="{!sdt}">
+            <apex:actionSupport event="onchange" reRender="gt"/>
+          </apex:input>
+      </apex:outputLabel>
+      <apex:outputLabel value="End Date :">
+          <apex:input type="date" label="End Date :" value="{!edt}"/>
+      </apex:outputLabel>
+      <apex:commandButton id="gt" value="Get" action="{!queryAccRec}" reRender="AccList"/>
+      <apex:commandButton value="Reset" action="{!reset}"/>
+  </apex:pageBlock>
+  
+  <apex:pageBlock >
+      <apex:pageBlockTable value="{!ListAccQuery}" var="Alst" id="AccList">
+          <apex:column value="{!Alst.Name}"  headerValue="Account Name"/>
+          <apex:column headerValue="Account ID" >
+              <apex:commandLink value="{!Alst.id}"/>
+          </apex:column> 
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

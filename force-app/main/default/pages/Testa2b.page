@@ -1,0 +1,18 @@
+<apex:page controller="Testa2bController">
+  <apex:form >
+  <apex:pageBlock id="pb">
+     
+      <apex:pageBlockSection columns="1" title="A thing">
+       <apex:inputText label="A" value="{!a}"/>
+       <apex:inputCheckbox label="Copy" >
+           <apex:actionSupport event="onchange" reRender="pb"/>
+       </apex:inputCheckbox>
+      </apex:pageBlockSection>
+     
+      <apex:pageBlockSection columns="1" title="B thing">
+      <apex:outputText label="B" value="{!a}"/>
+      </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page standardController="Payment__c" Sidebar="false" extensions="PaymentController">
+  <apex:sectionHeader title="Payment Edit" SUbtitle="New Payment"/>
+  <Apex:form >
+  <Apex:pageblock title="Information" id="pb">
+  
+  <Apex:pageBlockButtons >
+  <apex:commandButton value="Save" action="{!save}"/>
+  <apex:commandButton value="Save & New" action="{!SaveAndNew}"/>
+  <apex:commandButton value="Cancel" action="{!Cancel}"/>
+  </Apex:pageBlockButtons>
+  <apex:commandButton Value="Refresh"/>
+  <apex:pageBlockSection columns="1" id="pb">
+  <apex:inputField value="{!Payment__c.Student__c}">
+  <apex:actionSupport event="onchange" action="{!studentInfo}" reRender="pb,ot"/>
+  </apex:inputField>
+  <apex:outputField value="{!s.Mobile__c}" id="ot"/>
+  <apex:outputField value="{!s.Email__c}"/>
+  <apex:outputField value="{!s.Address__c}"/>
+  <apex:inputField value="{!Payment__c.Amount__c}"/>
+  <apex:inputField value="{!Payment__c.Date_of_Payment__c}"/>
+  <apex:inputField value="{!Payment__c.Payment_Type__c}"/>
+  </apex:pageBlockSection>
+  
+  </Apex:pageblock>
+  </Apex:form>
+</apex:page>

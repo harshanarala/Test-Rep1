@@ -1,0 +1,29 @@
+<apex:page controller="CreateMultiContactsController" tabStyle="Contact">
+    <apex:sectionHeader title="Create" Subtitle="Multiple Contacts"/>
+<apex:form >
+<apex:pageBlock >
+  <apex:pageBlockTable value="{!ConList}" var="Con" id="tbl">
+      <apex:column headerValue="First Name">
+      <apex:inputField value="{!Con.FirstName}"/>
+      </apex:column>
+      <apex:column headerValue="Last Name">
+      <apex:inputField value="{!Con.LastName}"/>
+      </apex:column>
+      <apex:column headerValue="Phone">
+      <apex:inputField value="{!Con.Phone}"/>
+      </apex:column>
+      <apex:column headerValue="Fax">
+      <apex:inputField value="{!Con.Fax}"/>
+      </apex:column>
+      <apex:column headerValue="Delete Row">
+      <apex:commandButton value="Del"/>
+      </apex:column>
+  </apex:pageBlockTable>
+  <apex:pageBlockButtons >
+      <apex:commandButton value="Add Row" action="{!addRow}" immediate="true" reRender="tbl"/>
+      <apex:commandButton value="Save" immediate="true"/>
+      <apex:commandButton value="Cancel" immediate="true"/>
+  </apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

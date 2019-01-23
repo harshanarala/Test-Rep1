@@ -1,0 +1,15 @@
+<apex:page Controller="ListofReportsController" standardStylesheets="false" docType="html-5.0">
+<html>
+    <apex:form styleClass="SLDS">
+    
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!reportList}" var="rep">
+                <apex:column headerValue="Name"><a href="/{!rep.id}">{!rep.Name}</a></apex:column>
+            </apex:pageBlockTable>
+            <apex:dataList value="{!reportList}" var="rep" styleClass="slds-List">
+                <a href="/{!rep.id}">{!rep.Name}</a>
+            </apex:dataList>
+            </apex:pageBlock>
+    </apex:form>
+</html>
+</apex:page>

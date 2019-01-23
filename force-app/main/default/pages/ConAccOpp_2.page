@@ -1,0 +1,53 @@
+<apex:page standardController="Contact" recordSetVar="Cont" extensions="ConAccOppController">
+ <apex:sectionHeader Title="Contact Detail Page"/>
+ <apex:form id="fm">
+   <apex:pageBlock title="Contact Details" id="pb" >
+   <!--<apex:selectList value="{!filterid}" size="1" >
+        <apex:actionSupport event="onchange" reRender="Table"/>
+        <apex:selectOptions value="{!listviewoptions}"/>
+    </apex:selectList> 
+     <apex:pageBlockTable value="{!Cont}" var="Con" id="Table">
+       <apex:column value="{!Con.FirstName}" />
+       <apex:column value="{!Con.LastName}" />
+       <apex:column value="{!Con.Phone}" />
+       <apex:column value="{!Con.AccountId}" />
+       <apex:column headerValue="Check" >
+       <apex:commandButton value="Check" reRender="pb" action="{!SelectCon}" >
+           <apex:param name="GetAccId" value="{!Con.AccountId}" assignTo="{!GetAccId}"/>
+           <apex:param name="GetConId" value="{!Con.Id}" assignTo="{!GetConId}"/>
+       </apex:commandButton>
+       </apex:column>
+       
+       </apex:pageBlockTable>
+       <center>
+        <apex:commandLink value="First" action="{!first}"/>&nbsp;&nbsp;
+        <apex:commandLink value="Previous" action="{!previous}"/>&nbsp;&nbsp;
+        <apex:commandLink value="Next" action="{!next}"/>&nbsp;&nbsp;
+        <apex:commandLink value="Last" action="{!last}"/>&nbsp;&nbsp;
+       </center>
+       <apex:pageBlockSection title="Account Details" id="APBS" >
+           Name<apex:outputText value="{!Acc.Name}"/>
+           Phone<apex:outputText value="{!Acc.Phone}"/>
+           Account No<apex:outputText value="{!Acc.AccountNumber}"/> 
+           Fax<apex:outputText value="{!Acc.Fax}"/>          
+       </apex:pageBlocksection>
+        
+       <!--<apex:pageBlockSection title="Contact Details">
+          <apex:detail subject="{!$CurrentPage.parameters.GetConId}" relatedList="true"/>
+         
+       </apex:pageBlockSection>-->
+      
+      
+     
+   </apex:pageBlock>
+  </apex:form>
+  <APEX:PAgeBlock >
+      <apex:pageBlockSection title="Contact Details">
+        <apex:detail subject="{!$CurrentPage.parameters.GetConId}" relatedList="false"/>
+        <apex:relatedList list="Opportunities"/>
+      </apex:pageBlockSection>
+  </APEX:PAgeBlock>
+
+          
+       
+</apex:page>

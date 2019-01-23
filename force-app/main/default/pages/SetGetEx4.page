@@ -1,0 +1,7 @@
+<apex:page controller="SetGetController" >
+  <apex:form id="fm" >
+   <apex:inputText value="{!name}"/>
+   <apex:outputText value="{!name}"/>
+   <apex:commandButton value="Refresh" reRender="fm"/>
+ </apex:form>
+</apex:page>

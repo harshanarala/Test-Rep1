@@ -1,0 +1,12 @@
+<apex:page controller="Accountdeatil" >
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!account}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column >
+          <apex:commandButton value="Details" action="{!'/' +a.id}"/>
+      </apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
